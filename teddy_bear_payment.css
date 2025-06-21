@@ -1,0 +1,103 @@
+:root {
+  --peach-light:  #FFE5D4;
+  --peach:        #FFC4A3;
+  --peach-medium: #FF9C66;
+  --peach-dark:   #CC7A4B;
+  --plum-dark:    #533B4D;
+  --accent-dark:  #5C3D2E;
+}
+
+*, html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--peach-light);
+}
+
+.mainDiv{
+	width: 50vw;
+	height: 60vh;
+	background-color: white;
+	border-radius: 12px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	margin-left: 25%;
+	margin-top: 10%;
+  padding: 2%;
+}
+
+h2{
+  margin-bottom: 20px;
+}
+
+label{
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+input{
+  width: 100%;
+  margin-left: 5%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 8px 0;
+  transition: border 0.2s;
+}
+
+input:focus{
+  border-color: #4caf50;
+  outline: none;
+}
+
+.payButton {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+    }
+.payButton:hover {
+      background-color: #45a045;
+    }
+
+.success {
+      color: #2e7d32;
+      background-color: #e8f5e9;
+      padding: 10px 15px;
+      margin-top: 20px;
+      border-radius: 8px;
+      display: none;
+      text-align: center;
+      font-weight: bold;
+    }
+a{text-decoration: none; color: white;}
+
+.backButton {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+
+.backButton:hover {
+      background-color: #500;
+    }

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <title>EMONKEY</title>
+    </head>
+    <body>
+        <div class="headerDiv">
+            <a href="index.html"><img src="./img/emonkey.png" class="EMONKEY-LOGO" /></a>
+            <button class="open-btn" onclick="toggleMenu()">Update location</button>
+            <div class="backdrop" id="backdrop" onclick="toggleMenu()"></div>
+            <div class="menu" id="dataMenu">
+                <span class="close-btn" onclick="toggleMenu()">&times;</span>
+                <label>
+                    Address:
+                    <input type="text" placeholder="Enter your address" />
+                </label>
+                <label>
+                    Post code:
+                    <input type="number" placeholder="Enter your post code" />
+                </label>
+                <button class="submit-btn" onclick="submitData()">Apply</button>
+            </div>
+            <input type="text" placeholder="Monkey search" class="monkeySearch" />
+        </div>
+
+        <div class="productContainer">
+            <div class="shopCardDiv">
+                <div class="shopCardDivImg"><img src="./img/bear_toy.png" class="toyImg" /></div>
+                <div class="shopCardDivText">
+                    <h2>Teddy Bear</h2>
+                    <p>A soft, brown plush teddy bear with a red bow.</p>
+                    <a href="teddy_bear_info.html" class="buyButton">Buy</a>
+                </div>
+            </div>
+
+            <div class="shopCardDiv">
+                <div class="shopCardDivImg"><img src="./img/lion_toy.png" class="toyImg" /></div>
+                <div class="shopCardDivText">
+                    <h2>Plush Lion</h2>
+                    <p>A soft plush lion with a fluffy mane and a friendly expression.</p>
+                    <a class="buyButton">Buy</a>
+                </div>
+            </div>
+
+            <div class="shopCardDiv">
+                <div class="shopCardDivImg"><img src="./img/train_toy.png" class="toyImg" /></div>
+                <div class="shopCardDivText">
+                    <h2>Wooden Toy Train</h2>
+                    <p>A classic wooden toy train with a red chimney and blue blocks.</p>
+                    <a class="buyButton">Buy</a>
+                </div>
+            </div>
+
+            <div class="shopCardDiv">
+                <div class="shopCardDivImg"><img src="./img/elephant_toy.png" class="toyImg" /></div>
+                <div class="shopCardDivText">
+                    <h2>Plush Elephant</h2>
+                    <p>A soft plush elephant with large floppy ears and a friendly expression.</p>
+                    <a class="buyButton">Buy</a>
+                </div>
+            </div>
+
+            <div class="shopCardDiv">
+                <div class="shopCardDivImg"><img src="./img/giraffe_toy.png" class="toyImg" /></div>
+                <div class="shopCardDivText">
+                    <h2>Plush Giraffe</h2>
+                    <p>A soft plush giraffe with brown spots and a gentle smile.</p>
+                    <a class="buyButton">Buy</a>
+                </div>
+            </div>
+
+            <div class="shopCardDiv">
+                <div class="shopCardDivImg"><img src="./img/dinosaur_toy.png" class="toyImg" /></div>
+                <div class="shopCardDivText">
+                    <h2>Plush Dinosaur</h2>
+                    <p>A soft plush dinosaur with small rounded spikes and a friendly face.</p>
+                    <a class="buyButton">Buy</a>
+                </div>
+            </div>
+
+            <div class="shopCardDiv">
+                <div class="shopCardDivImg"><img src="./img/koala_toy.png" class="toyImg" /></div>
+                <div class="shopCardDivText">
+                    <h2>Plush Koala</h2>
+                    <p>A soft plush koala with round fluffy ears and a gentle expression.</p>
+                    <a class="buyButton">Buy</a>
+                </div>
+            </div>
+
+            <div class="shopCardDiv">
+                <div class="shopCardDivImg"><img src="./img/sheep_toy.png" class="toyImg" /></div>
+                <div class="shopCardDivText">
+                    <h2>Plush Sheep</h2>
+                    <p>A soft plush sheep with a fluffy white body and a sweet face.</p>
+                    <a class="buyButton">Buy</a>
+                </div>
+            </div>
+
+            <div class="shopCardDiv">
+                <div class="shopCardDivImg"><img src="./img/bull_toy.png" class="toyImg" /></div>
+                <div class="shopCardDivText">
+                    <h2>Plush Bull</h2>
+                    <p>A soft plush bull with small curved horns and a warm expression.</p>
+                    <a class="buyButton">Buy</a>
+                </div>
+            </div>
+
+            <div class="shopCardDiv">
+                <div class="shopCardDivImg"><img src="./img/cat_toy.png" class="toyImg" /></div>
+                <div class="shopCardDivText">
+                    <h2>Plush Cat</h2>
+                    <p>A soft plush cat with pointed ears and a gentle smile.</p>
+                    <a class="buyButton">Buy</a>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            function toggleMenu() {
+                document.getElementById("dataMenu").classList.toggle("show");
+                document.getElementById("backdrop").classList.toggle("show");
+            }
+            function submitData() {
+                const address = document.querySelector('#dataMenu input[type="text"]').value;
+                const postCode = document.querySelector('#dataMenu input[type="number"]').value;
+                alert(`Your address: ${address}\nYour post code: ${postCode}`);
+                toggleMenu();
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="teddy_bear_info.css">
+	<title>teddy_bear_info</title>
+</head>
+<body>
+	<div class="headerDiv">
+		<a href="index.html"><img src="./img/emonkey.png" style="width: 4vw; height: 8vh; border-radius: 5px;"></a>
+		
+		<button class="open-btn" onclick="toggleMenu()">Update location</button>
+		<div class="backdrop" id="backdrop" onclick="toggleMenu()"></div>
+		<div class="menu" id="dataMenu">
+			<span class="close-btn" onclick="toggleMenu()">&times;</span>
+			<label>Address:
+				<input type="text" placeholder="Enter your address">
+			</label>
+			<label>Post code:
+				<input type="number" placeholder="Enter your post code">
+			</label>
+			<button class="submit-btn" onclick="submitData()">Apply</button>
+		</div>
+		<input type="text" placeholder="Monkey search" class="monkeySearch">
+	</div>
+
+	<div class="mainDiv">
+		<div class="imgDiv"><img src="./img/bear_toy.png" style="width: 27vw; height: 60vh;">
+		</div>
+
+		<div class="infoDiv">
+			<h1>Soft Plush Teddy Bear</h1>
+			<div class="rating">★ ★ ★ ★ ☆ (132 reviews)</div>
+			<div class="price">$19.99</div>
+			<div class="description">
+				This soft plush teddy bear is the perfect cuddly companion for children and collectors alike.
+				Made from high-quality, hypoallergenic materials, it features a warm brown color, soft texture, and a charming red bow around its neck.
+				The bear sits upright and has a friendly embroidered face with a gentle smile, making it perfect for both playtime and decoration.
+				<br><br>
+				<strong>Product Features:</strong>
+				<ul>
+					<li>Material: Ultra-soft polyester plush</li>
+					<li>Color: Warm brown with red bow</li>
+					<li>Height: Approximately 35 cm (14 inches)</li>
+					<li>Safe for children 3+</li>
+					<li>Washable surface</li>
+				</ul>
+				Perfect as a birthday gift, bedtime friend, or nursery decoration.
+				<a href="teddy_bear_payment.html" class="buy-button">Buy Now</a>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function toggleMenu(){
+			document.getElementById('dataMenu').classList.toggle('show');
+			document.getElementById('backdrop').classList.toggle('show');
+		}
+		function submitData(){
+			const address = document.querySelector('#dataMenu input[type="text"]').value;
+			const postCode = document.querySelector('#dataMenu input[type="number"]').value;
+			alert(`Your address: ${address}\nYour post code: ${postCode}`);
+      		toggleMenu();
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="teddy_bear_payment.css">
+	<title>Payment</title>
+</head>
+<body>
+	<div class="mainDiv">
+		<h2>Payment for goods</h2>
+		<form id="paaymentForm">
+			<label>Name on the card:</label>
+			<input type="text" required>
+
+			<label>Number of the card:</label>
+			<input type="text" maxlength="19" placeholder="0000 0000 0000 0000" required>
+
+			<label>Expiration date:</label>
+			<input type="text" maxlength="5" placeholder="MM/YY" required>
+
+			<label>CVV:</label>
+			<input type="text"  maxlength="3" required>
+
+			<button class="backButton"><a href="teddy_bear_info.html">Back</a></button>
+
+			<button type="submit" class="payButton">Pay</button>
+		</form>
+
+		<div class="success" id="successMessage">
+			Payment successfully imitated!
+		</div>
+	</div>
+
+	  <script>
+    document.getElementById("payment-form").addEventListener("submit", function(e) {
+      e.preventDefault(); // блокуємо реальне відправлення
+      document.getElementById("success-message").style.display = "block";
+    });
+  </script>
+</body>
+</html>
